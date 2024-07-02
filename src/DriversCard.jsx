@@ -1,6 +1,9 @@
 import React from 'react'
+import DriverImages from './data/DriverImages'
 
 function DriversCard({data, data2}) {
+
+    
  
 
     console.log(data2)
@@ -14,6 +17,10 @@ function DriversCard({data, data2}) {
             <div className='titles'>Number: <span>{data.Driver.permanentNumber}</span></div>
             <div className='titles'>Position: <span>{data.position}</span></div>
             <div className='titles'>Points: <span>{data.points}</span></div>
+            <div className='titles'>Code: <span>{data.Driver.code}</span></div>
+            <div className='image-container'>
+                <img src={DriverImages[data.Driver.code]} alt="" />
+            </div>
         </div>
       ))}
 
